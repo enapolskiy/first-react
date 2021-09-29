@@ -1,0 +1,49 @@
+body {
+  width: 100%;
+}
+.app-wraper {
+  display: grid;
+  width: 1900px;
+  margin: auto 0;
+
+  grid-template-areas:
+    "h h"
+    "n c ";
+  grid-template-rows: 60px 12fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 2px;
+}
+
+
+.header {
+  grid-area: h;
+  background-color: #4575d4;
+}
+
+.logo {
+  width: 100px;
+  z-index: 10;
+}
+
+.nav {
+  grid-area: n;
+  background-color: #ff6f00;
+}
+
+.item {
+    color: chartreuse;
+}
+
+.main_img {
+  width: 66%;
+}
+
+.content {
+  grid-area: c;
+  background-color: #ff6f00;
+}
+
+.app_wraper_content {
+  grid-area: c;
+  background-color: #ff6f00;
+}
