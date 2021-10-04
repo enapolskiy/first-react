@@ -6,16 +6,16 @@ const Dialogs = (props) => {
         <div className={classes.dialogs}>
           <div className={classes.dialogsItem}>
               <div className={classes.dialog + ' ' + classes.active}>
-                  <NavLink to="/dialogs/1">Dimysh</NavLink>
+                  <NavLink to="/dialogs/1" activeClassName={classes.activeLink}>Dimysh</NavLink>
               </div>
               <div className={classes.dialog}>
-                  <NavLink to="/dialogs/2">Sanya</NavLink>
+                  <NavLink to="/dialogs/2" activeClassName={classes.activeLink}>Sanya</NavLink>
               </div>
               <div className={classes.dialog}>
-                  <NavLink to="/dialogs/3">Sonya</NavLink>
+                  <NavLink to="/dialogs/3" activeClassName={classes.activeLink}>Sonya</NavLink>
               </div>
               <div className={classes.dialog}>
-                  <NavLink to="/dialogs/4">Yarik</NavLink>
+                  <NavLink to="/dialogs/4" activeClassName={classes.activeLink}>Yarik</NavLink>
               </div>
           </div>
             <div className={classes.messages}>
