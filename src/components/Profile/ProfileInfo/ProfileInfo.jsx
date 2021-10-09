@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
                     className="main_img"
                     src="https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg&ga=GA1.2.2103811857.1630281600"></img>
             </div>
-            <div>
+            <div className={classes.contentDeskription}>
                 ava+description
             </div>
         </div>)

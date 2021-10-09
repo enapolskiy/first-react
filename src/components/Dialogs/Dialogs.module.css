@@ -26,6 +26,16 @@
     padding: 13px;
 }
 
+.dialog a {
+    color: chartreuse;
+    text-decoration: none;
+}
+
+.dialog a:link{
+    color: azure;
+}
+
+
 .messages {
     padding: 13px;
 }
