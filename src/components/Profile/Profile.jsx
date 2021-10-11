@@ -9,7 +9,7 @@ const Profile = (props) => {
         <div>
           <img
             className="main_img"
-            src="https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg&ga=GA1.2.2103811857.1630281600"></img>
+            src="https://img1.akspic.ru/originals/5/1/7/0/80715-struktura-materinskaya_plata-elektronika-elektronnaya_shema-tekst-1920x1080.jpg"></img>
         </div>
         <div>
           ava+description
