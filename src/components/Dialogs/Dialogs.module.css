@@ -1,24 +1,45 @@
 .dialogs {
-   display: grid;
+    display: grid;
     grid-template-columns: 2fr 10fr;
+
 }
 
 .dialogsItem {
     padding: 10px;
+
+}
+
+.dialogsItem a {
+    text-decoration: none;
+    color: chartreuse;
+}
+
+.dialogsItem  .activeLink{
+    color: darkturquoise;
 }
 
 .dialogsItem .active {
-    color: darkcyan;
+    /*color: chartreuse;*/
 }
 
 .dialog {
     padding: 13px;
 }
 
+.dialog a {
+    color: chartreuse;
+    text-decoration: none;
+}
+
+.dialog a:link{
+    color: azure;
+}
+
+
 .messages {
-    padding: 10px;
+    padding: 13px;
 }
 
 .message {
-    padding: 10px;
+    padding: 13px;
 }
