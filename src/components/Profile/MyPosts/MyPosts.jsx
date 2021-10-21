@@ -4,14 +4,17 @@ import Post from './Post/Post';
 
 
 const MyPosts = (props) => {
-    let posts = [
-        {id:1, message:"Hi! my name is Alex!", likeCount:"likes 12"},
-        {id: 2, message: "Hi! Alex! How are you?", likeCount:"likes 2"}
-    ]
-    let postElement =posts.map(post =><Post message={post.message} likeCount={post.likeCount} id={post.id} />)
+
+    let postElement =props.posts.map(post =><Post message={post.message} likeCount={post.likeCount} id={post.id} />)
     return (
     <div>
-          My posts
+        <h3 className={classes.text}> My posts </h3>
+        <div>
+        <textarea className={classes.textarea}></textarea>
+        </div>
+        <div>
+            <button className={classes.button}>Add post</button>
+        </div>
         {postElement}
         </div>)
       

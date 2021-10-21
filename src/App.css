@@ -27,11 +27,11 @@ body {
 
 .nav {
   grid-area: n;
-  background-color: #ff6f00;
+  background-color: lightgrey;
 }
 
 .item {
-    color: chartreuse;
+    color: lightgrey;
 }
 
 .main_img {
@@ -40,10 +40,10 @@ body {
 
 .content {
   grid-area: c;
-  background-color: #ff6f00;
+  background-color:lightgrey;
 }
 
 .app_wraper_content {
   grid-area: c;
-  background-color: #ff6f00;
+  background-color: lightgrey;
 }

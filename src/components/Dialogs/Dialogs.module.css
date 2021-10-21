@@ -11,7 +11,7 @@
 
 .dialogsItem a {
     text-decoration: none;
-    color: chartreuse;
+    color: -webkit-link;
 }
 
 .dialogsItem  .activeLink{
@@ -27,12 +27,12 @@
 }
 
 .dialog a {
-    color: chartreuse;
+    /*color: chartreuse;*/
     text-decoration: none;
 }
 
 .dialog a:link{
-    color: azure;
+    /*color: black;*/
 }
 
 

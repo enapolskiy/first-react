@@ -1,4 +1,18 @@
 
 .content {
    padding: 20px;
+   padding-bottom: 0px;
+}
+
+.text {
+   padding: 20px;
+   padding-bottom: 0px;
+}
+
+.textarea {
+   margin-left: 20px;
+}
+
+.button {
+   margin-left: 20px;
 }

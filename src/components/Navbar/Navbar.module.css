@@ -1,7 +1,8 @@
 .nav {
     padding: 10px;
   grid-area: n;
-  background-color: #ff6f00;
+  background-color: lightgray;
+    border: 3px solid lightgoldenrodyellow;
 }
 
 .item {
@@ -9,12 +10,12 @@
 }
 
 .item a {
-    color: chartreuse;
+
     text-decoration: none;
     
 }
 
 .item a.activeLink {
-    color: deepskyblue;
+    color: royalblue;
 }
 
