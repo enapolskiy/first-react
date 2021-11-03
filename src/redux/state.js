@@ -6,7 +6,7 @@ let state = {
             {id:1, message:"Hi! my name is Alex!", likeCount:"likes 12"},
             {id:2, message: "Hi! Alex! How are you?", likeCount:"likes 2"}
         ],
-        newPostText:""
+        newPostText:"retyu"
     },
     dialogsPage : {
         dialogs: [
@@ -16,12 +16,15 @@ let state = {
             {id: 4, name: "Yarik"}
         ],
         messages: [
-            {id: 1, message: "Hi!"},
-            {id: 2, message: "Hello!"},
-            {id: 3, message: "Goog morning!"},
-            {id: 4, message: "Hello!!!!"}
-        ]
+            {id: 1, messageDialog: "Hi!"},
+            {id: 2, messageDialog: "Hello!"},
+            {id: 3, messageDialog: "Goog morning!"},
+            {id: 4, messageDialog: "Hello!!!!"}
+        ],
+
+
     }
+
 }
 window.state=state;
 export let addPost =() => {
@@ -37,6 +40,14 @@ export let addPost =() => {
 
 export let updateNewPostText =(newText) => {
     state.profilePage.newPostText = newText;
+    rerenderEntireTree(state)
+}
+export let addMessage = (dialogMessage) =>{
+    let newMessage ={
+        id: 1,
+        messageDialog: dialogMessage
+    }
+    state.dialogsPage.messages.push(newMessage)
     rerenderEntireTree(state)
 }
 
