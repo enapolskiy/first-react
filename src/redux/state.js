@@ -6,7 +6,7 @@ let state = {
             {id:1, message:"Hi! my name is Alex!", likeCount:"likes 12"},
             {id:2, message: "Hi! Alex! How are you?", likeCount:"likes 2"}
         ],
-        newPostText:"retyu"
+        newPostText:"gggggggg"
     },
     dialogsPage : {
         dialogs: [
@@ -21,7 +21,7 @@ let state = {
             {id: 3, messageDialog: "Goog morning!"},
             {id: 4, messageDialog: "Hello!!!!"}
         ],
-
+newMessageText:'dfgghj'
 
     }
 
