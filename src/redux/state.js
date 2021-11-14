@@ -37,12 +37,19 @@ export let addPost =() => {
     state.profilePage.newPostText= '';
     rerenderEntireTree(state)
 }
-
 export let updateNewPostText =(newText) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
-
+///////////////////////////////////////////////////
+export let addMessage = (messageTest) => {
+    let newMessage = {
+        id:1,
+        messageDialog:messageTest
+    }
+    state.dialogsPage.messages.push(newMessage)
+   rerenderEntireTree(state)
+}
 
 
 
