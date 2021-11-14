@@ -21,7 +21,7 @@ let state = {
             {id: 3, messageDialog: "Goog morning!"},
             {id: 4, messageDialog: "Hello!!!!"}
         ],
-newMessageText:'dfgghj'
+newMessageText:''
 
     }
 
@@ -42,14 +42,7 @@ export let updateNewPostText =(newText) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
-export let addMessage = (dialogMessage) =>{
-    let newMessage ={
-        id: 1,
-        messageDialog: dialogMessage
-    }
-    state.dialogsPage.messages.push(newMessage)
-    rerenderEntireTree(state)
-}
+
 
 
 
