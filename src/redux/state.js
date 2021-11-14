@@ -39,7 +39,7 @@ export let addPost =() => {
 }
 
 export let updateNewPostText =(newText) => {
-    state.profilePage.newPostText = newText;
+    state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
 export let addMessage = (dialogMessage) =>{
