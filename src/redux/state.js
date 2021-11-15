@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let  rerenderEntireTree = () => {
+
+}
 
 let state = {
     profilePage : {
@@ -6,7 +8,7 @@ let state = {
             {id:1, message:"Hi! my name is Alex!", likeCount:"likes 12"},
             {id:2, message: "Hi! Alex! How are you?", likeCount:"likes 2"}
         ],
-        newPostText:"gggggggg"
+        newPostText:""
     },
     dialogsPage : {
         dialogs: [
@@ -54,6 +56,11 @@ export let addMessage = () => {
 export let updateMessageText = (newText) => {
     state.dialogsPage.messageText=newText;
     rerenderEntireTree(state)
+}
+
+export const subscribe = (observer) =>{
+   rerenderEntireTree=observer;
+
 }
 
 

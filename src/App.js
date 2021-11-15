@@ -15,7 +15,7 @@ function App(props) {
 
 
   return (
-      <BrowserRouter>
+
         <div className = 'app_wraper_content'>
     <div className = "app-wraper">
       <Header />
@@ -33,7 +33,7 @@ function App(props) {
       <Route path='/settings' render={()=> <Settings />} />
       </div>
     </div>
-      </BrowserRouter>
+
   );
 }
 
