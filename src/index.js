@@ -1,27 +1,29 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import state, {subscribe} from "./redux/state";
 import ReactDOM from "react-dom";
 import App from "./App";
-import {addPost} from "./redux/state";
-import {updateNewPostText} from "./redux/state";
-import {addMessage} from "./redux/state";
-import {updateMessageText} from "./redux/state"
 import {BrowserRouter} from "react-router-dom";
+import store from "./redux/state";
 
 
-let rerenderEntireTree =()=> {
+let _callsubscrible =(state)=> {
     ReactDOM.render(
-        <React.StrictMode><BrowserRouter>
-            <App state={state} updateNewPostText={updateNewPostText} addPost={addPost}  addMessage={addMessage} updateMessageText={updateMessageText}/>
-        </BrowserRouter></React.StrictMode>,
+        <React.StrictMode>
+            <BrowserRouter>
+            <App state={state}
+                 updateNewPostText={store.updateNewPostText.bind(store)}
+                 addPost={store.addPost.bind(store)}
+                 addMessage={store.addMessage.bind(store)}
+                 updateMessageText={store.updateMessageText.bind(store)}/>
+            </BrowserRouter>
+        </React.StrictMode>,
         document.getElementById('root')
     );
 }
 
-rerenderEntireTree(state);
-subscribe(rerenderEntireTree)
+_callsubscrible(store.getState());
+store.subscribe (_callsubscrible)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
