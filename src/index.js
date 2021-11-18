@@ -12,8 +12,7 @@ let _callsubscrible =(state)=> {
         <React.StrictMode>
             <BrowserRouter>
             <App state={state}
-                 updateNewPostText={store.updateNewPostText.bind(store)}
-                 addPost={store.addPost.bind(store)}
+                 dispatch={store.dispatch.bind(store)}
                  addMessage={store.addMessage.bind(store)}
                  updateMessageText={store.updateMessageText.bind(store)}/>
             </BrowserRouter>

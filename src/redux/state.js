@@ -30,26 +30,29 @@ let store ={
     _callsubscrible  ()  {
         console.log("kkkkkk")
     },
+    subscribe (observer) {
+        this._callsubscrible = observer;
+
+    },
     getState () {
-        debugger
         return this._state
     },
-     addPost ()  {
-        let newPost = {
-            id:1,
-            message: this._state.profilePage.newPostText,
-            likeCount: 0
-        }
-         this._state.profilePage.posts.push (newPost)
-         this._state.profilePage.newPostText= '';
-         this._callsubscrible(this._state)
-    },
-     updateNewPostText (newText)  {
-
-         this._state.profilePage.newPostText = newText
-         this._callsubscrible(this._state)
-    },
-     addMessage  ()  {
+    // addPost ()  {
+    //     let newPost = {
+    //         id:1,
+    //         message: this._state.profilePage.newPostText,
+    //         likeCount: 0
+    //     }
+    //      this._state.profilePage.posts.push (newPost)
+    //      this._state.profilePage.newPostText= '';
+    //      this._callsubscrible(this._state)
+    // },
+    // updateNewPostText (newText)  {
+    //
+    //      this._state.profilePage.newPostText = newText
+    //      this._callsubscrible(this._state)
+    // },
+    addMessage  ()  {
         let newMessage = {
             id:1,
             messageDialog:this._state.dialogsPage.messageText
@@ -62,11 +65,23 @@ let store ={
         this._state.dialogsPage.messageText=newText;
         this._callsubscrible(this._state)
     },
+    dispatch (action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id:1,
+                message: this._state.profilePage.newPostText,
+                likeCount: 0
+            }
+            this._state.profilePage.posts.push (newPost)
+            this._state.profilePage.newPostText= '';
+            this._callsubscrible(this._state)
+        }
+        else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.profilePage.newPostText = action.newText
+            this._callsubscrible(this._state)
+        }
 
-    subscribe (observer) {
-        this._callsubscrible = observer;
-
-    },
+    }
 }
 
 
