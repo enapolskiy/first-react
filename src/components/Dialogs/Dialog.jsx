@@ -6,9 +6,9 @@ const Dialog = (props) => {
         <div>
             <Dialogs  dialogs={props.dialogsPage.dialogs}
                       messages={props.dialogsPage.messages}
-                      addMessage={props.addMessage}
-            messageText={props.dialogsPage.messageText}
-                      updateMessageText={props.updateMessageText}/>
+                      dispatch={props.dispatch}
+                      messageText={props.dialogsPage.messageText}
+                      />
         </div>
     )
 }

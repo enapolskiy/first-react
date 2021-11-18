@@ -21,8 +21,7 @@ function App(props) {
                                                   dispatch={props.dispatch} />} />
 
       <Route path='/dialogs' render={()=><Dialog dialogsPage={props.state.dialogsPage}
-                                                 addMessage={props.addMessage}
-                                                 updateMessageText={props.updateMessageText}/>} />
+                                                 dispatch={props.dispatch}/>} />
 
       <Route path='/news' render={()=><News />} />
       <Route path='/music' render={()=><Music />} />

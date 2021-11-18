@@ -1,4 +1,10 @@
 
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+const ADD_MESSAGE = 'ADD-MESSAGE'
+const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT'
+
+
 let store ={
 
     _state: {
@@ -52,21 +58,21 @@ let store ={
     //      this._state.profilePage.newPostText = newText
     //      this._callsubscrible(this._state)
     // },
-    addMessage  ()  {
-        let newMessage = {
-            id:1,
-            messageDialog:this._state.dialogsPage.messageText
-        }
-         this._state.dialogsPage.messages.push(newMessage)
-         this._state.dialogsPage.messageText = ""
-         this._callsubscrible(this._state)
-    },
-    updateMessageText (newText)  {
-        this._state.dialogsPage.messageText=newText;
-        this._callsubscrible(this._state)
-    },
+    // addMessage  ()  {
+    //     let newMessage = {
+    //         id:1,
+    //         messageDialog:this._state.dialogsPage.messageText
+    //     }
+    //      this._state.dialogsPage.messages.push(newMessage)
+    //      this._state.dialogsPage.messageText = ""
+    //      this._callsubscrible(this._state)
+    // },
+    // updateMessageText (newText)  {
+    //     this._state.dialogsPage.messageText=newText;
+    //     this._callsubscrible(this._state)
+    // },
     dispatch (action) {
-        if (action.type === 'ADD-POST') {
+        if (action.type === 'ADD_POST') {
             let newPost = {
                 id:1,
                 message: this._state.profilePage.newPostText,
@@ -76,13 +82,31 @@ let store ={
             this._state.profilePage.newPostText= '';
             this._callsubscrible(this._state)
         }
-        else if (action.type === "UPDATE-NEW-POST-TEXT") {
+        else if (action.type === 'UPDATE_NEW_POST_TEXT') {
             this._state.profilePage.newPostText = action.newText
             this._callsubscrible(this._state)
         }
 
-    }
+        if (action.type === 'ADD_MESSAGE') {
+            let newMessage = {
+                id:1,
+                messageDialog:this._state.dialogsPage.messageText
+            }
+            this._state.dialogsPage.messages.push(newMessage)
+            this._state.dialogsPage.messageText = ""
+            this._callsubscrible(this._state)
+        }
+        else  if (action.type === 'UPDATE_MESSAGE_TEXT') {
+            this._state.dialogsPage.messageText=action.newText;
+            this._callsubscrible(this._state)
+        }
+    },
 }
+export    const addPostActionCreator = () => ({type:'ADD_POST'})
+export const updateNewPostTextActionCreator = (text) => ({type:'UPDATE_NEW_POST_TEXT', newText:text})
+export const addMessageActionCreator = () => ({ type: 'ADD_MESSAGE'})
+export const updateMessageActionCreator = (textmes) => ({type: 'UPDATE_MESSAGE_TEXT', newText: textmes})
+
 
 
 
