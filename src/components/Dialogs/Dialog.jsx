@@ -1,5 +1,5 @@
 import Dialogs from "./DIalogs";
-import {updateMessageText} from "../../redux/state";
+import {updateMessageText} from "../../redux/store";
 
 const Dialog = (props) => {
     return (

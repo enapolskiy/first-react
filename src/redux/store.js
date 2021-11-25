@@ -29,11 +29,11 @@ let store ={
         }
 
     },
-    _callsubscrible  ()  {
+    _callsubscriber  ()  {
         console.log("kkkkkk")
     },
-    subscribe (observer) {
-        this._callsubscrible = observer;
+    subscriber (observer) {
+        this._callsubscriber = observer;
 
     },
     getState () {
@@ -70,7 +70,7 @@ let store ={
     dispatch (action) {
         this._state.profilePage=profileReducer(this._state.profilePage, action);
         this._state.dialogsPage=dialogsReducer(this._state.dialogsPage, action);
-        this._callsubscrible(this._state)
+        this._callsubscriber(this._state)
 
     },
 }
