@@ -2,7 +2,6 @@ import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 
 let store ={
-
     _state: {
         profilePage : {
             posts : [
@@ -32,7 +31,7 @@ let store ={
     _callsubscriber  ()  {
         console.log("kkkkkk")
     },
-    subscriber (observer) {
+    subscribe (observer) {
         this._callsubscriber = observer;
 
     },

@@ -11,6 +11,7 @@ import {BrowserRouter, Route} from "react-router-dom"
 
 
 function App(props) {
+  debugger
   return (
 
         <div className = 'app_wraper_content'>
