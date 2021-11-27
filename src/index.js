@@ -8,7 +8,6 @@ import store from "./redux/redux-store";
 
 
 let _callsubscriber =(state)=> {
-    debugger
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
