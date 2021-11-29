@@ -10,19 +10,20 @@ import{addMessageActionCreator, updateMessageActionCreator} from "../../redux/di
 // let WriterItem = props.dialogs.map(writer =><DialogItem name={writer.name} id={writer.id} />)
 // let MessageItem = messages.map(mes =><Message message={mes.message} id={mes.id} />)
 const Dialogs = (props) => {
+
     let WriterItem = props.dialogs.map(writer =><DialogItem name={writer.name} id={writer.id} />)
     let MessageItem = props.messages.map(mes =><Message message={mes.messageDialog} id={mes.id} />)
 
     let newMessageElement = React.createRef()
 
-  let addMessage = () => {
-      props.dispatch(addMessageActionCreator());
+  let onAddMessage = () => {
+      props.addMessage();
 
 
     }
     let onMessageChange = () => {
         let textmes = newMessageElement.current.value;
-        props.dispatch(updateMessageActionCreator(textmes))
+        props.updateMessage(textmes)
     }
     return (
         <div className={classes.dialogs}>
@@ -37,7 +38,7 @@ const Dialogs = (props) => {
                     <textarea ref={newMessageElement} onChange={onMessageChange} value={props.messageText}/>
                 </div>
                 <div>
-                    <button onClick={addMessage} >Add Message</button>
+                    <button onClick={onAddMessage} >Add Message</button>
                 </div>
 
             </div>

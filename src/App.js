@@ -23,7 +23,8 @@ function App(props) {
                                                   store={props.store}/>} />
 
       <Route path='/dialogs' render={()=><Dialog dialogsPage={props.state.dialogsPage}
-                                                 dispatch={props.dispatch}/>} />
+                                                 dispatch={props.dispatch}
+                                                 store={props.store}/>} />
 
       <Route path='/news' render={()=><News />} />
       <Route path='/music' render={()=><Music />} />
