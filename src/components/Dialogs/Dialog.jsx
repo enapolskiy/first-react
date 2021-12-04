@@ -2,12 +2,11 @@ import Dialogs from "./DIalogs";
 import {updateMessageText} from "../../redux/store";
 import DialogsContainer from "./DialogsContainer";
 
-const Dialog = (props) => {
-    debugger
+const Dialog = () => {
     return (
         <div>
             <DialogsContainer
-                store={props.store}
+                // store={props.store}
                 // dialogs={props.dialogsPage.dialogs}
                 //       messages={props.dialogsPage.messages}
                 //       dispatch={props.dispatch}

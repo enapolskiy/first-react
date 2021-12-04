@@ -11,20 +11,16 @@ import store from "./redux/redux-store";
 
 
 
-function App(props) {
+const App = () => {
   return (
 
         <div className = 'app_wraper_content'>
     <div className = "app-wraper">
       <Header />
       <Nav />
-      <Route path='/profile' render={()=><Profile profilePage={props.state.profilePage}
-                                                  dispatch={props.dispatch}
-                                                  store={props.store}/>} />
+      <Route path='/profile' render={()=><Profile />} />
 
-      <Route path='/dialogs' render={()=><Dialog dialogsPage={props.state.dialogsPage}
-                                                 dispatch={props.dispatch}
-                                                 store={props.store}/>} />
+      <Route path='/dialogs' render={()=><Dialog />} />
 
       <Route path='/news' render={()=><News />} />
       <Route path='/music' render={()=><Music />} />
