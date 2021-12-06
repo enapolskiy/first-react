@@ -5,20 +5,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import {BrowserRouter} from "react-router-dom";
 import store from "./redux/redux-store";
-import StoreContext from "./StoreContext";
+import {Provider} from "react-redux";
 
 
-let _callsubscriber =(state)=> {
+let _callsubscriber =()=> {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <StoreContext.Provider value={store}>
-            <App
-                // state={state}
-                //  store={store}
-                //  dispatch={store.dispatch.bind(store)}
-                 />
-                </StoreContext.Provider>
+                <Provider store={store} >
+            <App />
+                </Provider>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
