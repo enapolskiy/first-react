@@ -20,12 +20,12 @@ let _callsubscriber =()=> {
         document.getElementById('root')
     );
 }
-
-_callsubscriber(store.getState());
-store.subscribe(() =>{
-    let state = store.getState();
-    _callsubscriber(state)
-})
+_callsubscriber();
+// _callsubscriber(store.getState());
+// store.subscribe(() =>{
+//     let state = store.getState();
+//     _callsubscriber(state)
+// })
 
 
 
