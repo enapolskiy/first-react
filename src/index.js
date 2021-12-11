@@ -8,7 +8,7 @@ import store from "./redux/redux-store";
 import {Provider} from "react-redux";
 
 
-let _callsubscriber =()=> {
+
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -19,8 +19,7 @@ let _callsubscriber =()=> {
         </React.StrictMode>,
         document.getElementById('root')
     );
-}
-_callsubscriber();
+
 // _callsubscriber(store.getState());
 // store.subscribe(() =>{
 //     let state = store.getState();

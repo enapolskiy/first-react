@@ -48,7 +48,7 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(action)
         },
         addPost: () => {
-            store.dispatch(addPostActionCreator());
+            dispatch(addPostActionCreator());
         }
     }
 }

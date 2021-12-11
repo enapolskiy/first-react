@@ -37,6 +37,8 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return{
+        // dialogsPage: state.dialogsPage
+
         dialogs: state.dialogsPage.dialogs,
         messages: state.dialogsPage.messages,
         messageText: state.dialogsPage.messageText
@@ -47,9 +49,10 @@ let mapDispatchToProps = (dispatch) => {
      addMessage : () => {
             dispatch(addMessageActionCreator());
         },
+
         updateMessage : (textmes) => {
-            let action = updateMessageActionCreator(textmes);
-            dispatch(action);
+         let action = updateMessageActionCreator(textmes)
+         dispatch(action)
         }
  }
 }
