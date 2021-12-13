@@ -37,8 +37,6 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return{
-        // dialogsPage: state.dialogsPage
-
         dialogs: state.dialogsPage.dialogs,
         messages: state.dialogsPage.messages,
         messageText: state.dialogsPage.messageText

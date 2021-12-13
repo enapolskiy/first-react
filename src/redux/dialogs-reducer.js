@@ -13,7 +13,7 @@ let initialState = {
         {id: 3, messageDialog: "Goog morning!"},
         {id: 4, messageDialog: "Hello!!!!"}
     ],
-    messageText: ""
+    messageText: ''
 };
 const dialogsReducer = (state = initialState, action) => {
     let stateCopy = {...state};
@@ -24,14 +24,22 @@ const dialogsReducer = (state = initialState, action) => {
                 id: 5,
                 messageDialog: stateCopy.messageText
             }
-            stateCopy.messages = [...state.messages]
-            stateCopy.messages.push(newMessage)
-            stateCopy.messageText = "";
-            return stateCopy;
+            return  {
+                ...state, messages: [...state.messages, newMessage],
+                messageText: ''
+            };
+            // stateCopy.messages = [...state.messages]
+            // // stateCopy.messages.push(newMessage)
+            // stateCopy.messages.push(newMessage);
+            // stateCopy.messageText = "";
+            // return stateCopy;
         }
         case UPDATE_MESSAGE_TEXT: {
-            stateCopy.messageText = action.newText;
-            return stateCopy;
+            return {
+                ...state, messageText: action.newText
+            }
+            // stateCopy.messageText = action.newText;
+            // return stateCopy;
         }
         default:
             return state;
