@@ -3,12 +3,14 @@ import userPhoto from "../../assets/img/yan-blanco-yan-blanco-krysty-krab.jpg"
 import * as axios from "axios";
 
 let Users = (props) => {
-    if (props.users.length === 0) {
+    let getUsers = () => {
+        if (props.users.length === 0) {
 
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
 
-            props.setUsers(response.data.items)
-        });
+                props.setUsers(response.data.items)
+            });
+        }
     }
 
 
@@ -16,6 +18,7 @@ let Users = (props) => {
 
     return (
         <div>
+            <button onClick={getUsers}>Get Users</button>
             {props.users.map(u =><div key={u.id}>
                 <span>
                     <div>
