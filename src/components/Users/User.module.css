@@ -7,3 +7,12 @@
 .usersButton {
     margin: 10px;
 }
+
+.selectedPage {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selectedPage:hover {
+    cursor: pointer;
+}
